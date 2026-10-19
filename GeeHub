@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #262626;
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav a.active {
+    color: #0095f6;
+}
+
+main {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.post {
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-actions {
+    padding: 10px 12px;
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.post-content {
+    padding: 0 12px 12px 12px;
+    font-size: 14px;
+}
+
+.post-content p {
+    margin-bottom: 5px;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeHub - Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">GeeHub</a>
+        <nav>
+            <a href="index.html" class="active">Feed</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Post 1 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar"></div>
+                <strong>tech_guru</strong>
+            </div>
+            <img src="https://picsum.photos/600/600?random=1" alt="Post image" class="post-img">
+            <div class="post-actions">
+                <span>❤️</span>
+                <span>💬</span>
+                <span>✈️</span>
+            </div>
+            <div class="post-content">
+                <p><strong>tech_guru</strong> Building out the new GeeHub frontend prototype! 🚀</p>
+                <span style="color: #8e8e8e; font-size: 12px;">2 HOURS AGO</span>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar"></div>
+                <strong>design_queen</strong>
+            </div>
+            <img src="https://picsum.photos/600/600?random=2" alt="Post image" class="post-img">
+            <div class="post-actions">
+                <span>❤️</span>
+                <span>💬</span>
+                <span>✈️</span>
+            </div>
+            <div class="post-content">
+                <p><strong>design_queen</strong> Clean lines and minimalist aesthetics. ✨</p>
+                <span style="color: #8e8e8e; font-size: 12px;">5 HOURS AGO</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeHub - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid #dbdbdb;
+            margin-bottom: 20px;
+        }
+        .profile-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        .profile-info h2 {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .profile-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">GeeHub</a>
+        <nav>
+            <a href="index.html">Feed</a>
+            <a href="profile.html" class="active">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-header">
+            <div class="profile-avatar"></div>
+            <div class="profile-info">
+                <h2>my_gee_profile</h2>
+                <div class="profile-stats">
+                    <span><strong>3</strong> posts</span>
+                    <span><strong>1.2K</strong> followers</span>
+                    <span><strong>450</strong> following</span>
+                </div>
+                <p><strong>GeeHub Creator</strong><br>Coding web apps and sharing moments! 🌍💻</p>
+            </div>
+        </div>
+
+        <div class="profile-grid">
+            <img src="https://picsum.photos/300/300?random=10" alt="Grid item">
+            <img src="https://picsum.photos/300/300?random=11" alt="Grid item">
+            <img src="https://picsum.photos/300/300?random=12" alt="Grid item">
+        </div>
+    </main>
+</body>
+</html>
